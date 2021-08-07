@@ -10,7 +10,7 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 1rem 2rem 1rem 2rem;
+  padding: 1rem 2rem;
   height: 50px;
 }
 
@@ -28,6 +28,11 @@ body {
   padding-left: 2rem;
 }
 
+.nav__link {
+  text-decoration: none;
+  color: #ffffff;
+}
+
 .main-conteiner {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -42,5 +47,9 @@ body {
 .main-conteiner__image {
   max-width: 100%;
   height: auto;
+}
+
+.main-conteiner__image:hover {
+  opacity: 0.5;
 }
 /*# sourceMappingURL=main.css.map */
