@@ -1,0 +1,26 @@
+{
+  "name": "volna-site",
+  "version": "1.0.0",
+  "description": "Site for Volna (architectural studio)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "gulp sass",
+    "watch": "gulp watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jestyal/volna-site.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jestyal/volna-site/issues"
+  },
+  "homepage": "https://github.com/jestyal/volna-site#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.0.0",
+    "sass": "^1.35.2"
+  }
+}
