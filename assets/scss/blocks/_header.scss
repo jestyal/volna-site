@@ -1,0 +1,30 @@
+
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  height: 50px;
+}
+.header_transparent {
+  background-coolr: transparent;
+}
+
+.logo__image {
+  max-height: 50px;
+
+}
+
+
+
+.nav > ul > li {
+  display: inline-block;
+  padding-left: 2rem;
+}
+
+.nav__link {
+  text-decoration: none;
+  color: $main_fontcolor;
+}
+
+
