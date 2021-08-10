@@ -37,6 +37,7 @@
     opacity: 1;
     background-color: #00000050;
   }
+
   svg {
     position: absolute;
     display: block;
@@ -56,6 +57,7 @@
   max-width: 1460px;
   width: 100%;
   margin: 0 auto;
+
   svg {
     top: 70%;
   }
@@ -71,10 +73,37 @@
   height: 100%;
   align-items: flex-end;
 }
+
 .project__title {
   display: block;
-  position: absolute;
   padding: 0 0 35px;
   font-size: 48px;
   font-weight: 400;
+}
+
+h1 {
+  &.project__title {
+    position: absolute;
+  }
+}
+
+.project__info {
+  height: 100vh;
+  padding: 60px 0;
+  background-color: $dark-grey;
+}
+.project__inner {
+  display: flex;
+}
+.project__content {
+  width: 50%;
+  padding-right: 30px;
+}
+.project__desc {
+  p {
+    margin-bottom: 22px;
+  }
+}
+.project__benefits {
+  padding-bottom: 30px;
 }

@@ -37,6 +37,14 @@ a:hover {
   padding: 0;
 }
 
+.flex {
+  display: flex;
+}
+
+.flex-justify__between {
+  justify-content: space-between;
+}
+
 .header {
   position: absolute;
   top: 0;
@@ -161,8 +169,34 @@ a:hover {
 
 .project__title {
   display: block;
-  position: absolute;
   padding: 0 0 35px;
   font-size: 48px;
   font-weight: 400;
+}
+
+h1.project__title {
+  position: absolute;
+}
+
+.project__info {
+  height: 100vh;
+  padding: 60px 0;
+  background-color: #212121;
+}
+
+.project__inner {
+  display: flex;
+}
+
+.project__content {
+  width: 50%;
+  padding-right: 30px;
+}
+
+.project__desc p {
+  margin-bottom: 22px;
+}
+
+.project__benefits {
+  padding-bottom: 30px;
 }
