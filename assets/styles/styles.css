@@ -94,6 +94,37 @@ a:hover {
   color: #ffffff;
 }
 
+.footer {
+  padding: 10px 0 30px;
+  background-color: #212121;
+}
+
+.footer__wrap {
+  display: flex;
+  align-items: center;
+}
+
+.footer__contacts {
+  padding-left: 45px;
+  line-height: 1.5;
+  font-weight: 300;
+}
+.footer__contacts a {
+  display: block;
+  border-bottom: 0;
+}
+
+.scroll-up__btn {
+  display: block;
+  width: 68px;
+  height: 68px;
+  fill: #fff;
+}
+.scroll-up__btn:hover {
+  border: 0;
+  fill: #e9b524;
+}
+
 .project__wrap {
   position: relative;
   width: 100%;
@@ -181,15 +212,17 @@ h1.project__title {
 .project__info {
   height: 100vh;
   padding: 60px 0;
+  overflow: hidden;
   background-color: #212121;
 }
 
 .project__inner {
   display: flex;
+  height: 100%;
 }
 
 .project__content {
-  width: 50%;
+  width: 34%;
   padding-right: 30px;
 }
 
@@ -199,4 +232,70 @@ h1.project__title {
 
 .project__benefits {
   padding-bottom: 30px;
+}
+
+.project__text-paragraph {
+  display: none;
+}
+
+.project__text-paragraph_active {
+  display: block;
+}
+
+.project__slider-wrap {
+  width: 66%;
+}
+
+.project__slider {
+  position: relative;
+  display: flex;
+  height: 100%;
+}
+
+.project__slider-item {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 118%;
+}
+
+.project__slider-item_active {
+  display: block;
+}
+
+.project__slider-img-wrap {
+  width: 100%;
+  height: 100%;
+}
+
+.project__slider-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.project__plan-wrap {
+  height: 100vh;
+  width: 100%;
+}
+
+.project__slider-img-wrap {
+  width: 100%;
+  height: 100%;
+}
+
+.project__plan-img {
+  width: 100%;
+  height: 100%;
+}
+.project__plan-img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
