@@ -6,6 +6,7 @@
 
 body {
   position: relative;
+  min-width: 320px;
   width: 100%;
   background-color: $main_backcolor;
   color: $main_fontcolor;

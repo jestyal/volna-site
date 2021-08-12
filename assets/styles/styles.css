@@ -7,6 +7,7 @@
 
 body {
   position: relative;
+  min-width: 320px;
   width: 100%;
   background-color: #000000;
   color: #ffffff;
@@ -63,7 +64,7 @@ a:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 0;
+  padding: 16px 20px;
 }
 
 .logo {
@@ -147,6 +148,7 @@ a:hover {
   left: 0;
   width: 100%;
   height: 100%;
+  overflow: hidden;
 }
 
 .project__overlay-link {
@@ -243,6 +245,7 @@ h1.project__title {
 }
 
 .project__slider-wrap {
+  position: relative;
   width: 66%;
 }
 
@@ -250,6 +253,7 @@ h1.project__title {
   position: relative;
   display: flex;
   height: 100%;
+  width: 100%;
 }
 
 .project__slider-item {
@@ -259,10 +263,12 @@ h1.project__title {
   left: 0;
   height: 100%;
   width: 118%;
+  filter: grayscale(1);
 }
 
 .project__slider-item_active {
   display: block;
+  filter: grayscale(0);
 }
 
 .project__slider-img-wrap {
