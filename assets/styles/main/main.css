@@ -29,7 +29,7 @@ body {
 }
 
 .logo:hover {
-  background-image: url("../logo/logo-white-hover.svg");
+  background-image: url("/assets/logo/logo-white-hover.svg");
   background-size: 100%;
 }
 
