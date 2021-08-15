@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300');
+
+header,
+main,
+footer {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 2s linear, visibility 1s linear;
+}
+
+.preloader {
+    text-align: center;
+    background-color: #000000;
+    color: #cccbcb;
+    font-family: 'Roboto';
+    font-weight: 300;
+    font-size: 2rem;
+    padding-top: 40vh;
+    height: 100vh;
+    overflow: hidden;
+
+}
+
+.preloader__visibletext {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.preloader__visiblelogo {
+    /* display: inline-block;
+    overflow: hidden;
+    white-space: nowrap; */
+    margin-bottom: 1rem;
+    max-width: 100%;
+    height: 10vh;
+}
+
+.img_logo {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* .preloader__visiblelogo {
+    animation: showup 7s infinite;
+} */
+
+.preloader__visibletext:first-of-type,
+.preloader__visiblelogo:first-of-type {
+    animation: showup 7s infinite;
+}
+
+.preloader__visibletext:last-of-type,
+.preloader__visiblelogo:last-of-type {
+    width: 0px;
+    animation: reveal 7s infinite;
+}
+
+.preloader__visibletext:last-of-type span {
+    animation: slidein 7s infinite;
+}
+
+@keyframes showup {
+    0% {
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes slidein {
+    0% {
+        margin-left: -800px;
+    }
+
+    20% {
+        margin-left: -800px;
+    }
+
+    35% {
+        margin-left: 0px;
+    }
+
+    100% {
+        margin-left: 0px;
+    }
+}
+
+@keyframes reveal {
+    0% {
+        opacity: 0;
+        width: 0px;
+    }
+
+    20% {
+        opacity: 1;
+        width: 0px;
+    }
+
+    30% {
+        width: auto;
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        width: auto;
+    }
+}
+
+.loaded_hiding .preloader {
+    transition: opacity 7s;
+}
+
+.loaded .preloader {
+    display: none;
+}
+
+.loaded-main main,
+.loaded-main header,
+.loaded-main footer {
+    visibility: visible;
+    opacity: 1;
+}
