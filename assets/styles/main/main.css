@@ -29,7 +29,7 @@ body {
 }
 
 .logo:hover {
-  background-image: url("/assets/logo/logo-white-hover.svg");
+  background-image: url("../logo/logo-white-hover.svg");
   background-size: 100%;
 }
 
@@ -279,7 +279,7 @@ body {
 }
 
 .image-1 {
-  background-image: url("/assets/images/main/project-1-left.jpg");
+  background-image: url("assets/images/main/project-1-left.jpg");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
