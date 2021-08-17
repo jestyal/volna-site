@@ -32,11 +32,21 @@
   top: 0;
   z-index: 8;
   opacity: 0;
+  @media screen and (max-width: $breakpoint-laptop) {
+    & {
+      opacity: 1;
+    }
+  }
 
   &:hover {
     border: 0;
     opacity: 1;
     background-color: #00000050;
+    @media screen and (max-width: $breakpoint-laptop) {
+      & {
+        background-color: initial;
+      }
+    }
   }
 
   svg {
@@ -51,6 +61,12 @@
 .project__overlay-link_prev {
   left: 0;
   width: calc(100% - 1460px);
+  @media screen and (max-width: $breakpoint-laptop) {
+    & {
+      left: 20px;
+      width: 78px;
+    }
+  }
 }
 
 .project__overlay-link_down {
@@ -58,6 +74,12 @@
   max-width: 1460px;
   width: 100%;
   margin: 0 auto;
+  @media screen and (max-width: $breakpoint-laptop) {
+    & {
+      left: 100px;
+      max-width: calc(100% - 200px);
+    }
+  }
 
   svg {
     top: 70%;
@@ -67,6 +89,12 @@
 .project__overlay-link_next {
   right: 0;
   width: calc(100% - 1460px);
+  @media screen and (max-width: $breakpoint-laptop) {
+    & {
+      right: 20px;
+      width: 78px;
+    }
+  }
 }
 
 .project__background-info {
@@ -80,6 +108,11 @@
   padding: 0 0 35px;
   font-size: 48px;
   font-weight: 400;
+  @media screen and (max-width: $breakpoint-mobile) {
+    & {
+      font-size: 38px;
+    }
+  }
 }
 
 h1 {
@@ -93,16 +126,36 @@ h1 {
   padding: 60px 0;
   overflow: hidden;
   background-color: $dark-grey;
+  @media screen and (max-width: $breakpoint-laptop) {
+    & {
+      height: auto;
+    }
+  }
 }
 
 .project__inner {
   display: flex;
   height: 100%;
+  @media screen and (max-width: $breakpoint-laptop) {
+    & {
+      display: block;
+    }
+  }
 }
 
 .project__content {
   width: 34%;
   padding-right: 30px;
+  @media screen and (max-width: $breakpoint-notebook) {
+   & {
+     width: 45%;
+   }
+  }
+  @media screen and (max-width: $breakpoint-laptop) {
+    & {
+      width: 100%;
+    }
+  }
 }
 
 .project__desc {
@@ -126,6 +179,22 @@ h1 {
 .project__slider-wrap {
   position: relative;
   width: 66%;
+  @media screen and (max-width: $breakpoint-notebook) {
+    & {
+      width: 55%;
+    }
+  }
+  @media screen and (max-width: $breakpoint-notebook) {
+    & {
+      width: 100%;
+      height: 450px;
+    }
+  }
+  @media screen and (max-width: $breakpoint-mobile) {
+    & {
+      height: 350px;
+    }
+  }
 }
 
 .project__slider {
@@ -143,6 +212,11 @@ h1 {
   height: 100%;
   width: 118%;
   filter: grayscale(1);
+  @media screen and (max-width: $breakpoint-notebook) {
+    & {
+      width: 100%;
+    }
+  }
 }
 
 .project__slider-item_active {
@@ -176,6 +250,7 @@ h1 {
 .project__plan-img {
   width: 100%;
   height: 100%;
+
   img {
     display: block;
     width: 100%;

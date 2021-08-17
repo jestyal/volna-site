@@ -7,7 +7,7 @@
 
 body {
   position: relative;
-  min-width: 320px;
+  min-width: 340px;
   width: 100%;
   background-color: #000000;
   color: #ffffff;
@@ -161,10 +161,20 @@ a:hover {
   z-index: 8;
   opacity: 0;
 }
+@media screen and (max-width: 1024px) {
+  .project__overlay-link {
+    opacity: 1;
+  }
+}
 .project__overlay-link:hover {
   border: 0;
   opacity: 1;
   background-color: #00000050;
+}
+@media screen and (max-width: 1024px) {
+  .project__overlay-link:hover {
+    background-color: initial;
+  }
 }
 .project__overlay-link svg {
   position: absolute;
@@ -178,12 +188,24 @@ a:hover {
   left: 0;
   width: calc(100% - 1460px);
 }
+@media screen and (max-width: 1024px) {
+  .project__overlay-link_prev {
+    left: 20px;
+    width: 78px;
+  }
+}
 
 .project__overlay-link_down {
   left: calc(50% - 730px);
   max-width: 1460px;
   width: 100%;
   margin: 0 auto;
+}
+@media screen and (max-width: 1024px) {
+  .project__overlay-link_down {
+    left: 100px;
+    max-width: calc(100% - 200px);
+  }
 }
 .project__overlay-link_down svg {
   top: 70%;
@@ -192,6 +214,12 @@ a:hover {
 .project__overlay-link_next {
   right: 0;
   width: calc(100% - 1460px);
+}
+@media screen and (max-width: 1024px) {
+  .project__overlay-link_next {
+    right: 20px;
+    width: 78px;
+  }
 }
 
 .project__background-info {
@@ -206,6 +234,11 @@ a:hover {
   font-size: 48px;
   font-weight: 400;
 }
+@media screen and (max-width: 480px) {
+  .project__title {
+    font-size: 38px;
+  }
+}
 
 h1.project__title {
   position: absolute;
@@ -217,15 +250,35 @@ h1.project__title {
   overflow: hidden;
   background-color: #212121;
 }
+@media screen and (max-width: 1024px) {
+  .project__info {
+    height: auto;
+  }
+}
 
 .project__inner {
   display: flex;
   height: 100%;
 }
+@media screen and (max-width: 1024px) {
+  .project__inner {
+    display: block;
+  }
+}
 
 .project__content {
   width: 34%;
   padding-right: 30px;
+}
+@media screen and (max-width: 1140px) {
+  .project__content {
+    width: 45%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .project__content {
+    width: 100%;
+  }
 }
 
 .project__desc p {
@@ -248,6 +301,22 @@ h1.project__title {
   position: relative;
   width: 66%;
 }
+@media screen and (max-width: 1140px) {
+  .project__slider-wrap {
+    width: 55%;
+  }
+}
+@media screen and (max-width: 1140px) {
+  .project__slider-wrap {
+    width: 100%;
+    height: 450px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .project__slider-wrap {
+    height: 350px;
+  }
+}
 
 .project__slider {
   position: relative;
@@ -264,6 +333,11 @@ h1.project__title {
   height: 100%;
   width: 118%;
   filter: grayscale(1);
+}
+@media screen and (max-width: 1140px) {
+  .project__slider-item {
+    width: 100%;
+  }
 }
 
 .project__slider-item_active {
