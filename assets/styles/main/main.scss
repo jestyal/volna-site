@@ -58,7 +58,7 @@ body {
 }
 
 .logo:hover {
-    background-image: url('/assets/images/main/logo-white-hover.svg');
+    background-image: url('../../images/main/logo-white-hover.svg');
     background-size: contain;
 }
 
@@ -169,30 +169,30 @@ body {
 
 .box-image:hover .hover-project1::before,
 .box-image:hover .hover-project1::after {
-    background-image: url('/assets/images/main/hover-1.svg');
+    background-image: url('../../images/main/hover-1.svg');
 }
 
 .box-image:hover .hover-project3::before,
 .box-image:hover .hover-project3::after {
-    background-image: url('/assets/images/main/hover-3.svg');
+    background-image: url('../../images/main/hover-3.svg');
     background-size: 101%;
 }
 
 .box-image:hover .hover-project2::before,
 .box-image:hover .hover-project2::after {
-    background-image: url('/assets/images/main/hover-2.svg');
+    background-image: url('../../images/main/hover-2.svg');
     background-size: 52%;
 }
 
 .box-image:hover .hover-project4::before,
 .box-image:hover .hover-project4::after {
-    background-image: url('/assets/images/main/hover-4.svg');
+    background-image: url('../../images/main/hover-4.svg');
     transform: translate(-50%, -34%);
 }
 
 .box-image:hover .hover-project5::before,
 .box-image:hover .hover-project5::after {
-    background-image: url('/assets/images/main/hover-5.svg');
+    background-image: url('../../images/main/hover-5.svg');
     background-size: 57%;
 }
 
