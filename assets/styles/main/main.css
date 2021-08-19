@@ -1,0 +1,312 @@
+body {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.header,
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #212121;
+  font-family: "Roboto";
+}
+
+.footer {
+  min-height: 20%;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 0.8rem;
+  padding: 1.5rem 10rem;
+}
+
+.header {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 15%;
+  padding: 0.2rem 10rem;
+}
+
+.logo,
+.footer__arrow {
+  max-width: 100%;
+  height: 1.875rem;
+}
+
+.footer__arrow {
+  min-height: 3rem;
+  margin-right: 3rem;
+}
+
+.logo__image,
+.footer__arrow__img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.footer__text > p {
+  line-height: 1.5;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.logo:hover {
+  background-image: url("../../images/main/logo-white-hover.svg");
+  background-size: contain;
+}
+
+.logo:hover a > .logo__image {
+  background: transparent;
+  visibility: hidden;
+  text-decoration: none;
+}
+
+.nav > ul > li {
+  display: inline-block;
+  padding-left: 2rem;
+}
+
+.nav__link {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.nav__link:hover {
+  color: #F8B611;
+}
+
+.footer__arrow:hover .footer__arrow__img {
+  -webkit-filter: invert(70%) sepia(62%) saturate(1487%) hue-rotate(353deg) brightness(106%) contrast(94%);
+          filter: invert(70%) sepia(62%) saturate(1487%) hue-rotate(353deg) brightness(106%) contrast(94%);
+}
+
+.main-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0.3rem;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.left-images,
+.right-images {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 0.3rem;
+}
+
+.left-images {
+  margin-right: 0.15rem;
+}
+
+.right-images {
+  margin-left: 0.15rem;
+}
+
+.main-container__image {
+  max-width: 100%;
+  height: auto;
+}
+
+.box-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.box-image__image {
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
+}
+
+.inner-anima {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: 2s;
+  transition: 2s;
+  max-height: 100%;
+}
+
+.box-image_link {
+  display: block;
+  height: 100%;
+}
+
+.inner-anima::before,
+.inner-anima::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  opacity: 0;
+}
+
+.box-image:hover .inner-anima::before,
+.box-image:hover .inner-anima::after {
+  -webkit-transition: 0.9s;
+  transition: 0.9s;
+  opacity: .5;
+}
+
+.box-image:hover .hover-project1::before,
+.box-image:hover .hover-project1::after {
+  background-image: url("../../images/main/hover-1.svg");
+}
+
+.box-image:hover .hover-project3::before,
+.box-image:hover .hover-project3::after {
+  background-image: url("../../images/main/hover-3.svg");
+  background-size: 101%;
+}
+
+.box-image:hover .hover-project2::before,
+.box-image:hover .hover-project2::after {
+  background-image: url("../../images/main/hover-2.svg");
+  background-size: 52%;
+}
+
+.box-image:hover .hover-project4::before,
+.box-image:hover .hover-project4::after {
+  background-image: url("../../images/main/hover-4.svg");
+  -webkit-transform: translate(-50%, -34%);
+          transform: translate(-50%, -34%);
+}
+
+.box-image:hover .hover-project5::before,
+.box-image:hover .hover-project5::after {
+  background-image: url("../../images/main/hover-5.svg");
+  background-size: 57%;
+}
+
+.text-anima {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: #ffffff;
+  text-align: center;
+  z-index: 10;
+}
+
+.text-anima p {
+  font-size: 0.8rem;
+  font-family: "Roboto";
+  font-weight: 900;
+  line-height: 2rem;
+  margin: 0 auto;
+  text-align: justify;
+  -webkit-transform: scale(3);
+          transform: scale(3);
+  -webkit-transition: 1.2s;
+  transition: 1.2s;
+  opacity: 0;
+}
+
+.text-anima--bottom {
+  top: 81%;
+}
+
+.box-image:hover .text-anima p {
+  -webkit-transform: scale(2);
+          transform: scale(2);
+  opacity: 1;
+}
+
+.box-image:hover .box-image__image {
+  -webkit-filter: brightness(35%);
+          filter: brightness(35%);
+}
+
+.projects {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  grid-gap: 0.3rem;
+}
+
+.projects__item {
+  margin: 0;
+}
+
+.projects__img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.projects__item--1 {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-area: 1 / 1 / 4 / 2;
+}
+
+.projects__item--2 {
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-area: 4 / 1 / 7 / 2;
+}
+
+.projects__item--3 {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-area: 1 / 2 / 3 / 3;
+}
+
+.projects__item--4 {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-area: 3 / 2 / 5 / 3;
+}
+
+.projects__item--5 {
+  -ms-grid-row: 5;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-area: 5 / 2 / 7 / 3;
+}
+/*# sourceMappingURL=main.css.map */

@@ -39,6 +39,7 @@ Temporary Items
 .history
 .ionide
 
+<<<<<<< HEAD
 # Logs
 logs
 *.log
@@ -159,3 +160,6 @@ dist
 
 package-lock.json
 .idea
+=======
+.gitignore
+>>>>>>> ira_volna
