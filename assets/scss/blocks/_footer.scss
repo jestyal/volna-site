@@ -1,0 +1,30 @@
+.footer {
+  padding: 10px 0 30px;
+  background-color: $dark-grey;
+}
+.footer__wrap {
+  display: flex;
+  align-items: center;
+}
+.footer__contacts {
+  padding-left: 45px;
+  line-height: 1.5;
+  font-weight: 300;
+  a {
+    display: block;
+    border-bottom: 0;
+  }
+}
+.footer__scroll {
+
+}
+.scroll-up__btn {
+  display: block;
+  width: 68px;
+  height: 68px;
+  fill: #fff;
+  &:hover {
+    border: 0;
+    fill: $yellow;
+  }
+}
