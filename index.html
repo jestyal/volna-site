@@ -15,15 +15,16 @@
 				document.body.classList.add('loaded');
 				document.body.classList.add('loaded-main');
 				document.body.classList.remove('loaded_hiding');
-			}, 6000);
+				document.body.classList.remove('body-preloader')
+			}, 4000);
 		}
 	</script>
 </head>
 
-<body>
+<body class="body-preloader">
 	<div class="preloader">
 		<div class="preloader__visiblelogo">
-			<img src="assets/logo/logo-preloader.svg" alt="logo-preloader" class="img_logo"></div>
+			<img src="assets/images/main/logo-preloader.svg" alt="logo-preloader" class="img_logo"></div>
 		<!-- <div class="preloader__visibletext">ВОЛНА</div> -->
 		<div class="preloader__visibletext">
 			<span>Архитектурное бюро</span>
@@ -32,7 +33,7 @@
 
 	<header class="header">
 		<div class="logo">
-			<a href="#"><img src="assets/logo/logo.svg" alt="logo" class="logo__image"></a>
+			<a href="#"><img src="assets/images/main/logo.svg" alt="logo" class="logo__image"></a>
 		</div>
 		<nav class="nav">
 			<ul>
@@ -43,84 +44,75 @@
 	</header>
 
 	<main>
-		<div class="main-conteiner">
-
+		<div class="main-container">
 			<section class="left-images">
-
-				<div class="left-images__1">
-					<div class="box-imgage">
-						<img src="assets/images/main/project-1-left.jpg" alt="project-1-left"
-							class="main-conteiner__image">
-						<div class="container hover-project-1">
-							<div class="text">
-								<p>Архангельское.</p>
-								<p>Входная группа</p>
-							</div>
+				<a href="#" class="box-image">
+					<div class="inner-anima hover-project1">
+						<img src="assets/images/main/project-1-left.jpg" alt="project-1-left" class="box-image__image">
+						<div class="text-anima">
+							<p>Архангельское.</p>
+							<p>Входная группа</p>
 						</div>
 					</div>
-				</div>
+				</a>
 
-				<div class="left-images__2">
-					<div class="box-imgage">
-						<img src="assets/images/main/project-2-left.jpg" alt="project-2-left"
-							class="main-conteiner__image">
-						<div class="container hover-project-1">
-							<div class="text">
-								<p>Архангельское.</p>
-								<p>Входная группа</p>
-							</div>
+				<a href="#" class="box-image">
+					<div class="inner-anima hover-project3">
+						<img src="assets/images/main/project-2-left.jpg" alt="project-2-left" class="box-image__image">
+						<div class="text-anima text-anima--bottom">
+							<p>Ревитализация</p>
+							<p>монорельса</p>
 						</div>
 					</div>
-				</div>
+				</a>
 			</section>
 
 			<section class="right-images">
-
-				<div class="right-images__1">
-					<div class="box-imgage">
+				<a href="#" class="box-image">
+					<div class="inner-anima hover-project2">
 						<img src="assets/images/main/project-1-right.jpg" alt="project-1-right"
-							class="main-conteiner__image">
-						<div class="container hover-project-3">
-							<div class="text">
-								<p>Архангельское.</p>
-								<p>Входная группа</p>
-							</div>
+							class="box-image__image">
+						<div class="text-anima">
+							<p>Благоустройство</p>
+							<p>около СКК</p>
 						</div>
 					</div>
-				</div>
+				</a>
 
-				<div class="right-images__2">
-					<div class="box-imgage">
+				<a href="#" class="box-image">
+					<div class="inner-anima hover-project4">
 						<img src="assets/images/main/project-2-right.jpg" alt="project-2-right"
-							class="main-conteiner__image">
-						<div class="container hover-project-1">
-							<div class="text">
-								<p>Архангельское.</p>
-								<p>Входная группа</p>
-							</div>
+							class="box-image__image">
+						<div class="text-anima">
+							<p>Спортивный центр</p>
+							<p>в Парке Горького</p>
 						</div>
 					</div>
-				</div>
+				</a>
 
-
-				<div class="right-images__3">
-					<div class="box-imgage">
+				<a href="#" class="box-image">
+					<div class="inner-anima hover-project5">
 						<img src="assets/images/main/project-3-right.jpg" alt="project-3-right"
-							class="main-conteiner__image">
-						<div class="container hover-project-3">
-							<div class="text">
-								<p>Архангельское.</p>
-								<p>Входная группа</p>
-							</div>
+							class="box-image__image">
+						<div class="text-anima">
+							<p>Благоустройство</p>
+							<p>о.Алебашево</p>
 						</div>
 					</div>
-				</div>
-
+				</a>
 			</section>
 		</div>
 	</main>
 
-	<footer class="footer"></footer>
+	<footer class="footer">
+		<a class="footer__arrow" href="#">
+			<img src="assets/images/main/up-arrow.svg" alt="up-arrow" class="footer__arrow__img">
+		</a>
+		<div class="footer__text">
+			<p>+7 903 757 00 08</p>
+			<p>info@volna.com</p>
+		</div>
+	</footer>
 
 </body>
 

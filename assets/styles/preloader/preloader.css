@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300');
 
+.body-preloader {
+    overflow: hidden;
+    /* height: 100vh; */
+}
+
 header,
 main,
 footer {
@@ -15,14 +20,16 @@ footer {
     font-family: 'Roboto';
     font-weight: 300;
     font-size: 2rem;
-    padding-top: 40vh;
     height: 100vh;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
 }
 
 .preloader__visibletext {
-    display: inline-block;
     overflow: hidden;
     white-space: nowrap;
 }

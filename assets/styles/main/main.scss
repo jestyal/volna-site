@@ -1,54 +1,70 @@
 $main_backcolor: #000000;
 $main_fontcolor: #ffffff;
 $footer_backcolor: #212121;
-$animation-figure-proj1-color: #F8B611;
-$animation-figure-proj3-color: #F8B611;
+$color-nav__link: #F8B611;
 $main_font: 'Roboto';
-
+$hover_project_font: 'Helvetica, Arial, sans-serif';
 
 body {
     background-color: $main_backcolor;
     color: $main_fontcolor;
 }
 
-// header
+// header, footer
+
+.header,
+.footer {
+    display: flex;
+    background-color: $footer_backcolor;
+    font-family: $main_font;
+}
+
+.footer {
+    min-height: 20%;
+    justify-content: left;
+    align-items: center;
+    font-size: 0.8rem;
+    padding: 1.5rem 10rem;
+}
 
 .header {
-    display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.2rem 10rem;
     height: 15%;
-    background-color: $footer_backcolor;
+    padding: 0.2rem 10rem;
 }
 
-.logo {
+.logo,
+.footer__arrow {
     max-width: 100%;
-    height: 30px;
+    height: 1.875rem;
 }
 
-.logo__image {
+.footer__arrow {
+    min-height: 3rem;
+    margin-right: 3rem;
+}
+
+.logo__image,
+.footer__arrow__img {
     max-width: 100%;
     max-height: 100%;
 }
 
+.footer__text > p {
+    line-height: 1.5;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
 .logo:hover {
-    background-image: url('/assets/logo/logo-white-hover.svg');
-    background-size: 100%;
+    background-image: url('/assets/images/main/logo-white-hover.svg');
+    background-size: contain;
 }
 
 .logo:hover a > .logo__image {
     background: transparent;
     visibility: hidden;
-}
-
-
-// footer
-
-.footer {
-    height: 80px;
-    background-color: $footer_backcolor;
-
 }
 
 .nav > ul > li {
@@ -59,100 +75,138 @@ body {
 .nav__link {
     text-decoration: none;
     color: $main_fontcolor;
-    font-family: $main_font;
 }
 
-// только на флексах
+.nav__link:hover {
+    // color: #E55023;
+    color: $color-nav__link;
+}
 
-.main-conteiner {
+.footer__arrow:hover .footer__arrow__img {
+    filter: invert(70%) sepia(62%) saturate(1487%) hue-rotate(353deg) brightness(106%) contrast(94%);
+}
+
+// ---------------------------
+// layout only flexbox
+// ---------------------------
+
+.main-container {
     display: flex;
     margin: 0.3rem;
     align-items: flex-start;
 }
 
-.left-images {
+.left-images,
+.right-images {
     flex: 0 0 50%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.3rem;
+}
+
+.left-images {
     margin-right: 0.15rem;
 }
 
 .right-images {
-    flex: 0 0 50%;
     margin-left: 0.15rem;
 }
 
-.main-conteiner__image {
+.main-container__image {
     max-width: 100%;
     height: auto;
 }
 
-// animation for images
+// ---------------------------
+// projects
+// ---------------------------
 
-.box-imgage {
+.box-image {
     position: relative;
     overflow: hidden;
 }
 
-.container {
+.box-image__image {
     width: 100%;
     height: 100%;
-    display: flex;
-    justify-content: center;
 }
 
-.container:before,
-.container:after {
+.inner-anima {
+    display: flex;
+    justify-content: center;
+    transition: 2s;
+    max-height: 100%;
+}
+
+.box-image_link {
+    display: block;
+    height: 100%;
+}
+
+.inner-anima::before,
+.inner-anima::after {
     content: '';
-    // width: 10rem;
-    // height: 10rem;
-    // width: calc(3rem + 15vh);
-    // height: calc(3rem + 15vh);
     position: absolute;
     top: 50%;
     left: 50%;
-    // top: 0;
-    // left: 0;
-    // right: 0;
-    // bottom: 0;
-    // margin: auto;
-    // background: $animation-figure-proj1-color;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: block;
     opacity: 0;
-    transition: 2s;
-    transform: translate(-50%, -50%) rotate(45deg);
-}
-// .container:before {
-//     transform: translate(-50%, -50%) rotate(45deg);
-// }
-// .container:after {
-//     transform: translate(-50%, -50%) rotate(45deg);
-// }
-
-.hover-project-1::before,
-.hover-project-1::after {
-    width: 10rem;
-    height: 10rem;
-    background: $animation-figure-proj1-color;
 }
 
-// cross
-.hover-project-3::before,
-.hover-project-3::after {
-    background: $animation-figure-proj3-color;
-    height: 80px;
-    width: 180px;
+.box-image:hover .inner-anima::before,
+.box-image:hover .inner-anima::after {
+    transition: 0.9s;
+    opacity: .5;
+    // filter: saturate(200%);
+    // transform: scale(1.51);
 }
 
-.text {
+.box-image:hover .hover-project1::before,
+.box-image:hover .hover-project1::after {
+    background-image: url('/assets/images/main/hover-1.svg');
+}
+
+.box-image:hover .hover-project3::before,
+.box-image:hover .hover-project3::after {
+    background-image: url('/assets/images/main/hover-3.svg');
+    background-size: 101%;
+}
+
+.box-image:hover .hover-project2::before,
+.box-image:hover .hover-project2::after {
+    background-image: url('/assets/images/main/hover-2.svg');
+    background-size: 52%;
+}
+
+.box-image:hover .hover-project4::before,
+.box-image:hover .hover-project4::after {
+    background-image: url('/assets/images/main/hover-4.svg');
+    transform: translate(-50%, -34%);
+}
+
+.box-image:hover .hover-project5::before,
+.box-image:hover .hover-project5::after {
+    background-image: url('/assets/images/main/hover-5.svg');
+    background-size: 57%;
+}
+
+.text-anima {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: #ffffff;
-
     text-align: center;
     z-index: 10;
 }
 
-.text p {
+.text-anima p {
     font-size: 0.8rem;
     font-family: $main_font;
     font-weight: 900;
@@ -160,54 +214,30 @@ body {
     margin: 0 auto;
     text-align: justify;
     transform: scale(3);
-    transition: 1s;
+    transition: 1.2s;
     opacity: 0;
 }
 
-.box-imgage:hover img {
-    transform: scale(1);
-    filter: blur(0.04rem);
+.text-anima--bottom {
+    top: 81%;
 }
 
-.box-imgage:hover .container::before,
-.box-imgage:hover .container::after {
-    transition: 0.5s;
-    opacity: .3;
-}
-
-// two squares
-.box-imgage:hover .hover-project-1::before {
-    transform: translate(-50%, -50%) rotate(45deg) scale(2);
-}
-.box-imgage:hover .hover-project-1::after {
-    transform: translate(-50%, -50%) rotate(90deg) scale(2);
-}
-
-// cross
-.box-imgage:hover .hover-project-3::before {
-    transform: translate(-50%, -50%) rotate(45deg) scale(2);
-    opacity: 0.7;
-}
-.box-imgage:hover .hover-project-3::after {
-    transform: translate(-50%, -50%) rotate(135deg) scale(2);
-    opacity: 0.7;
-}
-
-
-.box-imgage:hover .text p {
+.box-image:hover .text-anima p {
     transform: scale(2);
     opacity: 1;
 }
 
+.box-image:hover .box-image__image {
+    // transform: scale(1);
+    // filter: blur(0.04rem);
+    filter: brightness(35%);
+}
 
-// .main-conteiner__image:hover {
-//     opacity: 0.5;
-// }
+// ---------------------------
+// only grid layout. left column increase
+// don't used
+// ---------------------------
 
-// .main-conteiner__image_project-1-left {}
-
-
-// только на гридах с разделением на пропорции
 .projects {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -240,38 +270,4 @@ body {
 }
 .projects__item--5 {
     grid-area: 5 / 2 / 7 / 3;
-}
-
-// на флексах с использование бэкграунда
-
-
-.grid-1 {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: auto;
-}
-
-.grid-2 {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-auto-rows: auto;
-}
-
-.grid-3 {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-auto-rows: auto;
-}
-
-.image-1 {
-    background-image: url('assets/images/main/project-1-left.jpg');
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    min-height: 100px;
-
-}
-
-.right {
-    background-color: green;
 }
