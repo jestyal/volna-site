@@ -41,3 +41,12 @@ a {
 .flex-justify__between {
   justify-content: space-between;
 }
+
+.box-image {
+  &:hover {
+    border: 0;
+  }
+}
+.main-container {
+  padding-top: 77px;
+}
