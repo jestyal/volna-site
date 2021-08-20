@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,
+        body {
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            width: 100%;
+            height: 100%;
+        }
+
+        .pict {
+            width: 50%;
+            margin: auto;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        @keyframes bounceIn {
+            40% {
+                -webkit-animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+                animation-timing-function: cubic-bezier(.215, .61, .355, 1)
+            }
+
+            40% {
+                -webkit-transform: scale3d(.9, .9, .9);
+                transform: scale3d(.9, .9, .9)
+            }
+        }
+
+        .bounceIn {
+            -webkit-animation-duration: 2s;
+            -webkit-animation-name: bounceIn;
+            animation-duration: 2s;
+            animation-name: bounceIn
+        }
+
+        @media screen and (max-width: 400px) {
+            .pict {
+                width: 100%;
+                margin: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container bounceIn">
+        <div class="pict">
+            <img class="logo" src="Logo.svg" alt="загрузка"></div>
+
+    </div>
+</body>
+
+</html>
